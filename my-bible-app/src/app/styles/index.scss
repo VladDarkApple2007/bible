@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* 1. Используем border-box и убираем отступы */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Настраиваем плавный скролл, когда это уместно */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* 3. Базовые настройки body (включая твой шрифт) */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed; /* Помогает браузеру */
+}
+
+/* 4. Убираем маркеры у списков, которые используются для семантики,
+   а не для реальных списков (accessibility) */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* 5. Базовая настройка медиа-элементов */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Наследование шрифтов для полей ввода */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Улучшенный перенос слов с переносами по слогам */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  hyphens: auto; /* Автоматически ставит переносы, где нужно */
+}
+
+/* 8. Создаем новый "контекст наложения" (stacking context) 
+   на корневом элементе. Это помогает управлять z-index. */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* 9. Уважаем выбор пользователя по отключению анимаций (accessibility) */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
