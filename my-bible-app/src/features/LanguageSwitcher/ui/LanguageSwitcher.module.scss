@@ -1,0 +1,25 @@
+.languageSwitcherButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  /* Убрал margin-left, лучше контролировать отступы в родителе (.navbar .right) */
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+
+  @media (max-width: 480px) {
+    display: none; /* Если в бургер-меню есть язык, тут его можно скрыть */
+  }
+}
+
+.globeIcon {
+  font-size: 1.3rem;
+  color: #555;
+}
