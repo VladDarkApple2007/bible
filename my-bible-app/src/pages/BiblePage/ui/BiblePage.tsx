@@ -1,7 +1,7 @@
 
-type Props = {}
 
-const BiblePage = (props: Props) => {
+
+const BiblePage = () => {
   return (
     <div>BiblePage</div>
   )

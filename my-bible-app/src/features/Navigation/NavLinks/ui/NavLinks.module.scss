@@ -6,7 +6,6 @@
   margin: 0;
   padding: 0;
 
-  /* Скрываем ссылки на экранах уже планшета (768px) */
   @media (max-width: 900px) {
     display: none;
   }
@@ -14,16 +13,16 @@
 
 .item {
   font-size: 15px;
-  font-weight: 600; /* Bold иногда слишком толсто */
+  font-weight: 600;
   color: #333;
 
   a {
     padding: 8px 12px;
-    border-radius: 20px; /* Более приятное скругление, чем 40% */
+    border-radius: 20px;
     transition: background-color 0.2s;
 
     &:hover {
-      background-color: #f0f0f0; /* Светло-серый, как в профиле */
+      background-color: #f0f0f0;
     }
   }
 }
