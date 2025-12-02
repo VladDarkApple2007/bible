@@ -1,9 +1,12 @@
+import AppBenefits from '@/widgets/AppBenefits/ui/AppBenefits';
+import PromoBanner from '@/widgets/PromoBanner/ui/PromoBanner';
 
-type Props = {}
-
-const HomePage = (props: Props) => {
+const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <>
+      <AppBenefits />
+      <PromoBanner />
+    </>
   )
 }
 
